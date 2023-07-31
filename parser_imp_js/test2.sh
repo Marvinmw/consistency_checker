@@ -1,1 +1,0 @@
-node latex2jsonTree.js -e "a.add(b).sub(c)"  -o latex2jsonTree.json
