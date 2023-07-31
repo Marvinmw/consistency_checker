@@ -3,26 +3,6 @@ import torch
 import torch.nn.functional as F
 from transformers import BertTokenizer, BertModel
 import collections
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import torch
 from transformers import AutoModel, AutoTokenizer
 from scipy.spatial.distance import cosine
