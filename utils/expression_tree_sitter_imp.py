@@ -130,9 +130,6 @@ def class_state_definition_expression(contract_code, isAll = True ):
 
 
 def check_if_return_if(node):
-    '''
-    目前只考虑 if ( condtion ) { return } else { return }
-    '''
     while( node.parent is not None ):
         if node.parent.type == "if_statement":
             condition_node = node.parent.children[2] # if ( condtion
@@ -172,7 +169,7 @@ def relace_fn_call(tokens_index, class_var_statment, fnc_code, fns, f_name):
                         if len(f_return):
                             rr = f_return[0]
                             for r in f_return:
-                                # if len(r['code_type']) > len(rr['code_type']): # 多个返回值，目前只考虑返回字符串最长的那个
+                                # if len(r['code_type']) > len(rr['code_type']): 
                                 #     rr = r
                                 rr = r
                                 res_copy = res.copy()
@@ -217,7 +214,6 @@ def replace_var(tokens_index, var_list, code):
             if index_to_code_token( t, code )  in var_list:
                 ##logger.info(f"===========  { var_list[ index_to_code_token( t, code ) ][-1]}")
                 if "_literal" in var_list[ index_to_code_token( t, code ) ][-1]['code_type'][0] or "string" in var_list[ index_to_code_token( t, code ) ][-1]['code_type'][0]:
-                    #常量不替换
                    new_tokens_index.append(t)
                 else:
                     new_tokens_index.append( (t[0], t[1], t[2], t[3], "(" + var_list[ index_to_code_token( t, code ) ][-1]['code'] + ")" ) )
@@ -252,11 +248,6 @@ def split_multiple_def(vars_part, def_part, ex, token_types, assgnindex):
 
 
 def function_expressionRaw(class_var_statment, fn_code, fns):
-    '''
-    1. rewrite formats 
-    2. 对variable_declaration_statement, assignment_expression, expression_statement里面的function call做替换
-    3. 对return_statement里面的变量和function call做替换
-    '''
     tree = solidity_parser.parse(bytes(fn_code,'utf8')) 
     # rewrite add sub mul div
     modified_code, _ = transformAST(fn_code, tree.root_node)
@@ -338,39 +329,7 @@ def function_expressionRaw(class_var_statment, fn_code, fns):
                 assign_statement[k].extend(r[k])
 
     expression_statement = collections.defaultdict(list)
-    # for ex in type_visitor.type_to_node['expression_statement']:
-    #     if ex.text.decode().startswith('require'):
-    #         continue
-    #     if "=" not in ex.text.decode():
-    #         continue
-    #     tokens_index=tree_to_token_index(ex)  
-    #     code=fn_code.split('\n')
-    #     code_tokens=[ index_to_code_token(x,code) for x in tokens_index ]
-    #     assgnindex = get_assignment_index(code_tokens)
-    #     if assgnindex == -1:
-    #         continue
-    #     token_types = [ x[2] for x in tokens_index ]
-    #     c=" ".join(code_tokens)
-    #     cs = c.split("=")
-    #     vars_part = cs[0].strip()
-    #     vars_part = vars_part.replace(")", "")
-    #     vars_part = vars_part.replace("(", "")
-    #     vars_part=vars_part.strip()
-    #     if vars_part.endswith(","):
-    #         vars_part = vars_part[:-1].strip()
-    #     def_part = cs[1].strip()
-    #     if ","  not in vars_part:
-    #         tmpv = vars_part.split(" ")
-    #         v_type = tmpv[0]
-    #         v_name = tmpv[-1] #code_tokens[assgnindex-1]
-    #         if "[" in vars_part:
-    #             v_name = vars_part
-    #         ##logger.info(f'expression_statement expression raw {ex.text} , remove = , { " ".join(code_tokens[assgnindex+1:])}')
-    #         expression_statement[v_name].append( {"start":ex.start_point,  "code": " ".join(code_tokens[assgnindex+1:]), "code_type":v_type, "raw_code": ex.text.decode(), "pos": (ex.start_point, ex.end_point) }  )
-    #     else:
-    #         r=split_multiple_def(vars_part, def_part, ex, token_types, assgnindex)
-    #         for k in r:
-    #             expression_statement[k].extend(r[k])
+   
 
     var_list = collections.defaultdict(list)
     local_var_list = collections.defaultdict(list)
@@ -398,15 +357,10 @@ def function_expressionRaw(class_var_statment, fn_code, fns):
         if len(rcode.strip()):
             return_statement.append( {  "code":rcode,  "code_type":token_types, "raw_code":ex.text.decode(), "pos":(ex.start_point, ex.end_point) , "if-else":(inIf, isBranch, condition) } )
     
-    # 根据 var 在代码里出现的最后位置确定 expression
+ 
     return {"return":return_statement, "var":local_var_list}
 
 def function_expressionReFormat(class_var_statment, fn_code, fns, f_name):
-    '''
-    1. rewrite formats 
-    2. 对variable_declaration_statement, assignment_expression, expression_statement里面的function call做替换
-    3. 对return_statement里面的变量和function call做替换
-    '''
     tree = solidity_parser.parse(bytes(fn_code,'utf8')) 
     # rewrite add sub mul div
     modified_code, _ = transformAST(fn_code, tree.root_node)
@@ -490,44 +444,7 @@ def function_expressionReFormat(class_var_statment, fn_code, fns, f_name):
                 for k in r:
                     assign_statement[k].extend(r[k])
     expression_statement = collections.defaultdict(list)
-    # for ex in type_visitor.type_to_node['expression_statement']:
-    #     if ex.text.decode().startswith('require'):
-    #         continue
-    #     if "=" not in ex.text.decode():
-    #         continue
-    #     tokens_index=tree_to_token_index(ex)
-    #    # ##logger.info(tokens_index)    
-    #     tokens_index = retyping(tokens_index, code)     
-    #     code=fn_code.split('\n')
-    #     code_tokens=[ index_to_code_token(x,code) for x in tokens_index ]
-    #     code_tokens = relace_fn_call(tokens_index, class_var_statment, code, fns, f_name)
-    #     assgnindex = get_assignment_index(code_tokens)
-    #     if assgnindex == -1:
-    #         continue
-    #     token_types = [ x[2] for x in tokens_index ]
-    #     c=" ".join(code_tokens)
-    #     cs = c.split("=")
-    #     vars_part = cs[0].strip()
-    #     vars_part = vars_part.replace(")", "")
-    #     vars_part = vars_part.replace("(", "")
-    #     vars_part=vars_part.strip()
-    #     if vars_part.endswith(","):
-    #         vars_part = vars_part[:-1].strip()
-    #     def_part = cs[1].strip()
-    #     if ","  not in vars_part:
-    #         tmpv = vars_part.split(" ")
-    #         # print("======================")
-    #         # print(tmpv)
-    #         v_name = tmpv[-1] #code_tokens[assgnindex-1]
-    #         if "[" in vars_part:
-    #             v_name = vars_part
-    #         v_type = tmpv[0]
-    #         ##logger.info(f'expression_statement expression raw {ex.text} , remove = , { " ".join(code_tokens[assgnindex+1:])}')
-    #         expression_statement[v_name].append( {"start":ex.start_point,  "code": " ".join(code_tokens[assgnindex+1:]), "code_type":v_type, "raw_code": ex.text.decode(), "pos": (ex.start_point, ex.end_point) }  )
-    #     else:
-    #         r=split_multiple_def(vars_part, def_part, ex, token_types, assgnindex)
-    #         for k in r:
-    #             expression_statement[k].extend(r[k])
+    
 
     var_list = collections.defaultdict(list)
     local_var_list = collections.defaultdict(list)

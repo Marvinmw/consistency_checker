@@ -38,13 +38,13 @@ class ASTGraphCreator( ):
         self.node_id += 1
         if parent_id is None:
             self.ast.graph["root_node"] = my_id
-        #if n.is_named and n.type != "comment":
+        
         def attr_to_label(node_type, index_code_node, numchid):
             if numchid == 0:
                 trimmed_code = index_to_code_token(index_code_node, self.code.split("\n"))
             else:
                 trimmed_code = ""
-           # print(node_type + ":" + code)
+           
             return node_type + ":" + trimmed_code
         sp = n.start_point
         ep = n.end_point 

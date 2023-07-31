@@ -1,68 +1,3 @@
-
-'''
-Backbone Match Algorithm,
-    Input: (white_tree, dev_tree)
-    Ouput: the backbone matching nodes mapping {white_tree_node : dev_tree_node}
-    Step:
-        1.  get operation nodes, M,  in the whitepaper tree in an pre-defiend order, e.g., pre-order nodes
-        2.  locate the matched nodes, N, in the dev_tree corresoning to the operation nodes M.
-            a. in-order traverse nodes in the dev_tree, H
-            b. i = 0, res={}
-            c. for m in M:
-                for h in range(i,len(H) ):
-                    if H[h] is sub-structure m:
-                        i = h
-                        res[m] = h
-        3. return res
-
-Fine-grained Match Algorithm, 
-    Input:  output of Backbone Match Alg, white_tree, dev_tree
-    Output: all matches pair for node in the whitepaper tree
-    Step:
-        fine_grained_res = {}
-        1. bottom-up order nodes K in res.keys()
-        2. for k in K:
-                n = res[k]
-                ck = permutations( k.children )
-                cn = permutations( n.children )
-                min_len = min(len(k.children), len(n.children))
-                matching_pairs = []
-                for kp in ck:
-                    for np in cn:
-                        match_vector = [ ]
-                        for w_n,d_n in zip(kp[:min_len], np[:min_len])
-                            match_vector.append( isExactMatch(w_n, d_n) )
-                        matching_pairs.append( ( sum(match_vector), match_vector, kp, np ) )
-                matching_pairs=sorted(matching_pairs, key=lambda x:x[0], reverse=True)
-                kp =  matching_pairs[0][2][:min_len]
-                np =  matching_pairs[0][3][:min_len]    
-                for k,n in zip(kp,np):
-                    fine_grained_res[k] = n          
-        return fine_grained_res
-
-        
-isExactMatch(n1, n2): -> DECKARD Alg ?
-    if n1 is leaf and n2 is leaf:
-        if n1.value is matched with n2.value:
-            return True
-        else:
-            return False
-    elif n1 is leaf and n2 is not leaf:
-        if n1 is semantically matched with  subtree of n2:
-            return True
-        else:
-            return False
-    elif n1 is not leaf and n2 is leaf:
-        if n2 is semantically matched with  subtree of n1:
-            return True
-        else:
-            return False
-    else:
-        if subtree of n2 is semantically matched with  subtree of n1:
-            return True
-        else:
-            return False
-'''
 import networkx as nx
 import collections
 from collections import Counter, defaultdict
@@ -98,7 +33,6 @@ def get_root(tree):
  
 def is_sublist(list1, list2):
     """
-    判断list1是否是list2的子列表
     """
     if len(list1) > len(list2):
         return False,-1
@@ -126,22 +60,6 @@ def check_pair(wG, dG, wp, dp):
         return nx.has_path(wG, wp[p[0]], wp[p[1]]) == nx.has_path(dG, dp[p[0]], dp[p[1]])
     
 def backbone_match(white_tree, dev_tree):
-    '''
-    Backbone Match Algorithm,
-    Input: (white_tree, dev_tree)
-    Ouput: the backbone matching nodes mapping {white_tree_node : dev_tree_node}
-    Step:
-        1.  get operation nodes, M,  in the whitepaper tree in an pre-defiend order, e.g., pre-order nodes
-        2.  locate the matched nodes, N, in the dev_tree corresoning to the operation nodes M.
-            a.  pre-order traverse nodes in the dev_tree, H
-            b. i = 0, res={}
-            c. for m in M:
-                p1 = compute the path from root to m
-                for h in range(i,len(H) ):
-                    p2 = compute the path from root to h
-
-        3. return res
-    '''
     root_white = get_root(white_tree)
     white_tree_node_bfsorder = bfs_order(white_tree, root_white)
     white_tree_node_bfsorder = list( filter( lambda x: True if white_tree.nodes[x]['type'] in ['OperatorNode', 'FunctionNode'] else False , white_tree_node_bfsorder ) )

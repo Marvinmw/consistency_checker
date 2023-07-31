@@ -1,24 +1,9 @@
-#  Copyright [2022] [MA WEI @ NTU], ma_wei@ntu.edu.sg
 
-#  Licensed under the Apache License, Version 2.0 (the "License");
-#  you may not use this file except in compliance with the License.
-#  You may obtain a copy of the License at
-
-#  http://www.apache.org/licenses/LICENSE-2.0
-
-#  Unless required by applicable law or agreed to in writing, software
-#  distributed under the License is distributed on an "AS IS" BASIS,
-#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-#  See the License for the specific language governing permissions and
-#  limitations under the License.
-#load parsers
 from tree_sitter import Language, Parser
 import re
 from io import StringIO
 import  tokenize
 import os
-# from .expression_visitor import TypedVisitor
-# from .SeparatorVisitor import SeparatorVisitor
 
 lang="solidity"
 parsers={}        
@@ -31,12 +16,6 @@ parsers[lang]= solidity_parser
 def split_functions(code):
    # print(type(code))
     tree = solidity_parser.parse(bytes(f"""{code}""",'utf8'))  
-    # type_visitor = TypedVisitor()
-    # type_visitor.walk(tree)
-    # new_tree = solidity_parser.parse(bytes(f"""{code}""",'utf8'))  
-    # sep_visitor = SeparatorVisitor()
-    # sep_visitor.walk(new_tree)
-   
     code=code.split('\n')
  
 
@@ -55,12 +34,6 @@ def split_functions(code):
             ep = child_node.end_point   
             ct = index_to_code_token((sp, ep), code)
             fncode.append( ct  )
-            # if (sp, ep) in sep_visitor.append_newline:
-            #     fncode.append("\n")
-            # elif (sp, ep) in sep_visitor.append_comma_newline:
-            #     fncode.append(";\n")
-            # else:
-            #     pass
         res[fncode[1]]=" ".join(fncode)
     
      # constructor_definition
@@ -76,12 +49,6 @@ def split_functions(code):
             ep = child_node.end_point   
             ct = index_to_code_token((sp, ep), code)
             fncode.append( ct  )
-            # if (sp, ep) in sep_visitor.append_newline:
-            #     fncode.append("\n")
-            # elif (sp, ep) in sep_visitor.append_comma_newline:
-            #     fncode.append(";\n")
-            # else:
-            #     pass
         res[fncode[0]]=" ".join(fncode)
     return res
     
@@ -103,12 +70,6 @@ def get_constructor(code):
             ep = child_node.end_point   
             ct = index_to_code_token((sp, ep), code)
             fncode.append( ct  )
-            # if (sp, ep) in sep_visitor.append_newline:
-            #     fncode.append("\n")
-            # elif (sp, ep) in sep_visitor.append_comma_newline:
-            #     fncode.append(";\n")
-            # else:
-            #     pass
         res[fncode[0]]=" ".join(fncode)
     return res
 
