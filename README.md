@@ -1,14 +1,16 @@
-## Introduction
-- We collect eight DeFi projects that is inlcuded in the folder `repo_check`
-- Each .ipynb file is a checker fo earch DeFi project.
-- You need interact with ChatGPT and get the output as the next stage's input.
-- You can find the reports, in each DeFi folder, with name `revenue_**.md`.
-- We also report the hidden fees not presented in the whitepaper.
+# Introduction
 
-## Dependency
-Our tool use tree-sitter to parse the souce code without compiling. 
-- you should install `tree-sitter-solidity`
+- This repository contains a collection of eight DeFi projects found within the `repo_check` folder. 
+- Each project is accompanied by a respective .ipynb file, serving as a project-specific checker.
+- Interaction with ChatGPT is necessary to use the output as input for the next stage.
+- Reports for each DeFi project can be found in their respective folders, labeled as `revenue_**.md`. 
+- These reports include the disclosure of hidden fees that may not be presented within the project's whitepaper.
 
+While this tool currently faces some limitations in terms of accuracy, it has demonstrated the potential value of AIGC in evaluating the consistency between a project's whitepaper and its actual implementation.
+
+# Dependencies
+
+Our tool utilizes tree-sitter to parse source code without requiring compilation. As a dependency, you will need to install `tree-sitter-solidity`.
 
 
 
