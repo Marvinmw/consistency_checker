@@ -1,0 +1,9 @@
+You are a good Smart Contract developer. Your task is to give a variable with a good name according to the description I provide. The variable is about the charge fee.  The description about the variable is 
+
+    '''
+    threshold for the HFT liquidity pool
+    We anticipated on that by implementing a threshold of 2200 BNB for the HFT liquidity pool as we determined this to be the perfect balance between enough liquidity and tradable volatility. 
+    Once the threshold of 2200 BNB is met, the part of the network fee which goes to the liquidity pool will flow to the marketing treasury.
+    '''
+
+What is the good variable name? Please provide 3 good choices. The name should be short, concise and precise. The answer just contains three names and do not need explain.

@@ -1,0 +1,9 @@
+You are a good Smart Contract developer. Your task is to give a variable with a good name according to the description I provide. The variable is about the charge fee.  The description about the variable is 
+
+    '''
+    Foundation (3%)
+    What is the foundation?
+    The foundation is the entity making sure all operations on the central side of the Hodl Finance ecosystem run smoothly. It manages the manual conversions, buy-backs with profits, and last but certainly not least the Foundation Trading Algorithms (FTA), which serve as the core engine of the total ecosystem. 
+    '''
+
+What is the good variable name? Please provide 3 good choices. The name should be short, concise and precise. The answer just contains three names and do not need explain.

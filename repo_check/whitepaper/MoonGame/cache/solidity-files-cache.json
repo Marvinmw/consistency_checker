@@ -1,0 +1,261 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/home/wei/Projects/audit_study/inconsistency_check/repo_check/whitepaper/MoonGame/contracts/Auth.sol": {
+      "lastModificationDate": 1686058669403,
+      "contentHash": "a32f08c75e005c5e87a8cc181f1e8f99",
+      "sourceName": "contracts/Auth.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Auth"
+      ]
+    },
+    "/home/wei/Projects/audit_study/inconsistency_check/repo_check/whitepaper/MoonGame/contracts/MoonGame.sol": {
+      "lastModificationDate": 1686058669403,
+      "contentHash": "975c6b191c054d203c7e891e04976a34",
+      "sourceName": "contracts/MoonGame.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./SafeMath.sol",
+        "./IBEP20.sol",
+        "./Auth.sol",
+        "./IDEXRouter.sol",
+        "./DividendDistributor.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IDEXFactory",
+        "MoonGame"
+      ]
+    },
+    "/home/wei/Projects/audit_study/inconsistency_check/repo_check/whitepaper/MoonGame/contracts/SafeMath.sol": {
+      "lastModificationDate": 1686058669403,
+      "contentHash": "ec7381dc8944a5218cf7bddff9945145",
+      "sourceName": "contracts/SafeMath.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
+    },
+    "/home/wei/Projects/audit_study/inconsistency_check/repo_check/whitepaper/MoonGame/contracts/DividendDistributor.sol": {
+      "lastModificationDate": 1686058669403,
+      "contentHash": "112c2dd8514dee2256935e055c23cbbe",
+      "sourceName": "contracts/DividendDistributor.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./SafeMath.sol",
+        "./Auth.sol",
+        "./IDividendDistributor.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "DividendDistributor"
+      ]
+    },
+    "/home/wei/Projects/audit_study/inconsistency_check/repo_check/whitepaper/MoonGame/contracts/IDEXRouter.sol": {
+      "lastModificationDate": 1686058669403,
+      "contentHash": "793aba2dde9cacb7850adf4a22fcdcab",
+      "sourceName": "contracts/IDEXRouter.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IDEXRouter"
+      ]
+    },
+    "/home/wei/Projects/audit_study/inconsistency_check/repo_check/whitepaper/MoonGame/contracts/IBEP20.sol": {
+      "lastModificationDate": 1686058669403,
+      "contentHash": "36d620ef78c4d48cfc7158e27bd35351",
+      "sourceName": "contracts/IBEP20.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IBEP20"
+      ]
+    },
+    "/home/wei/Projects/audit_study/inconsistency_check/repo_check/whitepaper/MoonGame/contracts/IDividendDistributor.sol": {
+      "lastModificationDate": 1686058669403,
+      "contentHash": "5ecea10eabc36f3a900ac0dc59d99ba4",
+      "sourceName": "contracts/IDividendDistributor.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IDividendDistributor"
+      ]
+    }
+  }
+}

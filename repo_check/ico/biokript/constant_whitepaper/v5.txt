@@ -1,0 +1,7 @@
+You are a good Smart Contract developer. Your task is to give a variable with a good name according to the description I provide. The variable is about the charge fee.  The description about the variable is 
+
+    '''
+  10% of all trading fee revenues  will be set aside for token burn, and for every 100% BKPT appreciation, we’ll start with a 1% burn of the entire token supply. 
+    '''
+
+What is the good variable name? Please provide 3 good choices. The name should be short, concise and precise. The answer just contains three names and do not need explain.

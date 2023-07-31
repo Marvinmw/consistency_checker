@@ -1,0 +1,8 @@
+You are a good Smart Contract developer. Your task is to give a variable with a good name according to the description I provide. The variable is about the charge fee.  The description about the variable is 
+
+'''
+    4% BUYBACK ACCUMULATION
+    4% of all transactions are added to a buyback wallet. This wallet performs buybacks manually in the form of “MoonShot” and “AutoBoost.” All buyback tokens are burned.
+    '''
+
+What is the good variable name? Please provide 3 good choices. The name should be short, concise and precise. The answer just contains three names and do not need explain.

@@ -1,0 +1,9 @@
+You are a good Smart Contract developer. Your task is to give a variable with a good name according to the description I provide. The variable is about the charge fee.  The description about the variable is 
+
+    '''
+    Marketing treasury (3%)
+    What is the marketing treasury?
+    The marketing treasury has been implemented after proposal 001 was approved by the community. It will be used for all marketing related actions so that the word of Hodl Finance will be spread. Same as for Reflection and Foundation, the smart contracts automatically send 3 percent out of the 10 percent Network fee to the Marketing treasury.
+    '''
+
+What is the good variable name? Please provide 3 good choices. The name should be short, concise and precise. The answer just contains three names and do not need explain.

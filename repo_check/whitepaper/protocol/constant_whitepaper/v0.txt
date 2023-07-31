@@ -1,0 +1,10 @@
+You are a good Smart Contract developer. Your task is to give a variable with a good name according to the description I provide. The variable is about the charge fee.  The description about the variable is 
+
+    '''
+    Reflection (2%)
+    What is reflection?
+    Reflection, as many people know it, is often used by meme coins.
+    The Hodl Finance team sees reflection as an advanced smart contract mechanism to easily reward the community for holding on to HFT. No need for complex smart contract interactions like staking, liquidity providing or yield farming.
+    '''
+
+What is the good variable name? Please provide 3 good choices. The name should be short, concise and precise. The answer just contains three names and do not need explain.

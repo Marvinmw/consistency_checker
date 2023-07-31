@@ -1,0 +1,10 @@
+You are a good Smart Contract developer. Your task is to give a variable with a good name according to the description I provide. The variable is about the charge fee.  The description about the variable is 
+
+'''
+    8.5% AUTOMATIC DISTRIBUTION
+    When you buy the token, you are added to a list of people that are subject to redistributions.
+    The contract, on each transaction, handles redistributions to a few of the addresses
+    on the list, on a first-to-last basis. Once it goes through the whole list, it starts again. This means your reflections are always in a “queue” until they are released.
+    '''
+
+What is the good variable name? Please provide 3 good choices. The name should be short, concise and precise. The answer just contains three names and do not need explain.

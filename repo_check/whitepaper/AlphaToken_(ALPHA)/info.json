@@ -1,0 +1,29 @@
+{
+    "_id": "63a43b5be26983cd05450980",
+    "address": "0xa1faa113cbe53436df28ff0aee54275c13b40975",
+    "change": "-0.65%",
+    "circulating_market_cap": "$58,977,286.00",
+    "description": "Alpha Finance Lab is an ecosystem of DeFi products and focused on building an ecosystem of automated yield-maximizing Alpha products that interoperate to bring optimal alpha to users on a cross-chain level.",
+    "holders": "9,364 0.011%",
+    "img": "https://etherscan.io/cdn-cgi/mirage/cd8a31436882a6fc96d179614425c5ddc0554facd4d790a0d2bf1d27950690cb/1440/token/images/alpha_32.png?v=2",
+    "name": "AlphaToken (ALPHA)",
+    "on_chain_market_cap": "$78,447,000.00",
+    "price": "$0.0784",
+    "rank": "135",
+    "real_git": "https://github.com/AlphaFinanceLab/alpha-lending-smart-contract",
+    "social": {
+        "site": "https://alphafinance.io/",
+        "email": "contact@alphafinance.io",
+        "blog": "https://blog.alphafinance.io/",
+        "twitter": "https://twitter.com/alphafinancelab",
+        "github": "https://github.com/AlphaFinanceLab/",
+        "telegram": "https://t.me/AlphaFinanceLab",
+        "linkedin": "https://www.linkedin.com/company/alpha-finance-lab",
+        "discord": "https://discord.gg/Z2vuKDT",
+        "whitepaper": "https://github.com/AlphaFinanceLab/alpha-lending-smart-contract/blob/master/documents/Alpha%20Lending%20Whitepaper.pdf",
+        "coinmarketcap": "https://coinmarketcap.com/currencies/alpha-finance-lab/",
+        "coingecko": "https://www.coingecko.com/en/coins/alpha-finance/",
+        "uniswap": "https://v2.info.uniswap.org/pair/0x60b2cc2c6ecd3dd89b4fd76818ef83186e2f2931/"
+    },
+    "volume": "$939,617.00"
+}

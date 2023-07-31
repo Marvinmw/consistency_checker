@@ -1,0 +1,13 @@
+You are a good Smart Contract developer. Your task is to give a variable with a good name according to the description I provide. The variable is about the charge fee.  The description about the variable is 
+
+    '''
+    Referral Program
+    An on-chain referral program has been implemented to incentivize users to invite friends to join the farming. Inviters can earn 1% of his/her friends' earnings forever.
+    Visit PantherSwap referral program page: https://pantherswap.com/referrals​
+    Unlock your wallet to get your unique referral link
+    Share your referral link with your friends
+    Every time your friends get rewards from farms, you will receive referral commissions automatically
+    The current referral commission rate is 1%
+    '''
+
+What is the good variable name? Please provide 3 good choices. The name should be short, concise and precise. The answer just contains three names and do not need explain.
