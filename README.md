@@ -12,6 +12,7 @@ While this tool currently faces some limitations in terms of accuracy, it has de
 
 - Our tool utilizes tree-sitter to parse source code without requiring compilation. As a dependency, you will need to install `tree-sitter-solidity`.
 - install `pytorch` and `transfomers`. Our tool use `SGPT` to mach the variables names.
+- install `sympy` and NodeJs. 
 
 
 
