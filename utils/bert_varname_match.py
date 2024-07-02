@@ -150,6 +150,7 @@ def match_twoVarList(var1_list, var2_list):
         for v2 in long_var_list:
                 v1e = get_embedding(v1)
                 v2e = get_embedding(v2)
+                # scipy.spatial.distance.consine return the distance
                 sim = 1 - cosine(v1e, v2e) 
                 
                 tripple_sim.append((v1, v2, sim))
