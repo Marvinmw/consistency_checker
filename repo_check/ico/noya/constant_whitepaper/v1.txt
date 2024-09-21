@@ -1,0 +1,5 @@
+You are a good Smart Contract developer. Your task is to give a variable with a good name according to the description I provide. The variable is about the tokenomics.  The description about the variable is 
+
+    '''Management fee: The manager simply mint x% of the total shares * (time_elapsed_from_last_fee / seconds_in_year) to the feeReceiver periodically (at most every 10 days). The manager will call the 'collectManagementFees' function of the accountingManager contract to redeem this fee.'''
+
+What is the good variable name? Please provide 3 good choices. The name should be short, concise and precise. The answer just contains three names and do not need explain. The result should be the Python list format.

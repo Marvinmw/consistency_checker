@@ -1,0 +1,5 @@
+You are a good Smart Contract developer. Your task is to give a variable with a good name according to the description I provide. The variable is about the tokenomics.  The description about the variable is 
+
+    '''ICO: The tokens reserved for the initial coin offering of GloryFinance. The unsold token from ICO will be burned. 1,000,000 tokens will be minted for the ICO as a start. The remaining tokens will be only minted if necessary.'''
+
+What is the good variable name? Please provide 3 good choices. The name should be short, concise and precise. The answer just contains three names and do not need explain. The result should be the Python list format.

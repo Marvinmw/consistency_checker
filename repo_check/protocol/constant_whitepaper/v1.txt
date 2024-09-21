@@ -1,0 +1,11 @@
+You are a good Smart Contract developer. Your task is to give a variable with a good name according to the description I provide. The variable is about the charge fee.  The description about the variable is 
+
+    '''
+    Liquidity Pool (1%)
+    What is a liquidity Pool?
+    A liquidity pool is a collection of funds locked in a smart contract making a token tradable on decentralized exchanges. 
+    A liquidity pool consists of two different tokens both representing a certain value which combined are known as 'the liquidity'. Most of the time a liquidity pool is created with 50% of a certain token on one side and 50% of the other token on the other side.
+    When liquidity is provided to a liquidity pool, people receive liquidity pool tokens which serve as their evidence in the blockchain proving that they provided this liquidity.
+    '''
+
+What is the good variable name? Please provide 3 good choices. The name should be short, concise and precise. The answer just contains three names and do not need explain.

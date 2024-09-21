@@ -1,0 +1,7 @@
+You are a good Smart Contract developer. Your task is to give a variable with a good name according to the description I provide. The variable is about the charge fee.  The description about the variable is 
+
+    '''
+   Each owner of Shiva tokens is eligible to automatically receive $BTCB from the reward pool. The reward pool contains a number of $BTCB tokens reserved by the contract. The contract uses a portion of the tax applied to every transaction (10%) to do this.
+    '''
+
+What is the good variable name? Please provide 3 good choices. The name should be short, concise and precise. The answer just contains three names and do not need explain.

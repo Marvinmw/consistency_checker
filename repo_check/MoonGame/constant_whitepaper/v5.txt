@@ -1,0 +1,8 @@
+You are a good Smart Contract developer. Your task is to give a variable with a good name according to the description I provide. The variable is about the charge fee.  The description about the variable is 
+
+'''
+    ANTI-WHALE
+    The anti-whale mechanic disallows sellers to offload more than 0.1% of the entire supply of the token. This prevents coordinated dumping of tokens and encourages long-term holding
+    '''
+
+What is the good variable name? Please provide 3 good choices. The name should be short, concise and precise. The answer just contains three names and do not need explain.

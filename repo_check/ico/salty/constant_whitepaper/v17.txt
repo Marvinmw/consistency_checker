@@ -1,0 +1,5 @@
+You are a good Smart Contract developer. Your task is to give a variable with a good name according to the description I provide. The variable is about the tokenomics.  The description about the variable is 
+
+    '''A default 9.5% of all arbitrage profits (which are generated in WETH) are swapped to SALT and burned.'''
+
+What is the good variable name? Please provide 3 good choices. The name should be short, concise and precise. The answer just contains three names and do not need explain.

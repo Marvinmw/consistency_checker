@@ -1,0 +1,5 @@
+You are a good Smart Contract developer. Your task is to give a variable with a good name according to the description I provide. The variable is about the tokenomics.  The description about the variable is 
+
+    '''When a user's collateral value falls below the required 150%, (relative to their minted DYAD), they can be liquidated. Anyone can trigger a liquidation. '''
+
+What is the good variable name? Please provide 3 good choices. The name should be short, concise and precise. The answer just contains three names and do not need explain. The result should be the Python list format.

@@ -1,0 +1,5 @@
+You are a good Smart Contract developer. Your task is to give a variable with a good name according to the description I provide. The variable is about the tokenomics.  The description about the variable is 
+
+    '''minUnstakePercent - the percentage of the original staked SALT that is reclaimable when unstaking the minimum number of weeks. Default: 20%'''
+
+What is the good variable name? Please provide 3 good choices. The name should be short, concise and precise. The answer just contains three names and do not need explain.

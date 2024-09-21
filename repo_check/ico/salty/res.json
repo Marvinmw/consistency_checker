@@ -1,0 +1,127 @@
+{
+  "v15.txt": [
+    "weeklyEmissionRate",
+    "weeklySaltDistributionRate",
+    "emissionsWeeklyPct"
+  ],
+  "v8.txt": [
+    "minimumBallotDurationDays",
+    "ballotDurationMinimumDays",
+    "minBallotDays"
+  ],
+  "v9.txt": [
+    "requiredStakePercentToPropose",
+    "proposalThresholdPercent",
+    "minStakePercentForProposal"
+  ],
+  "v14.txt": [
+    "dailyRewardsPercent1000",
+    "rewardsDailyPct1000",
+    "dailyRewardRate1000"
+  ],
+  "v16.txt": [
+    "stakingRewardsPercent",
+    "stakerRewardsPct",
+    "saltStakingRewardRate"
+  ],
+  "v17.txt": [
+    "minUnstakeWeeks",
+    "unstakeThresholdWeeks",
+    "minimumUnstakePeriod"
+  ],
+  "v13.txt": [
+    "maxWhitelistedPools",
+    "maxPoolsWhitelisted",
+    "whitelistedPoolsCap"
+  ],
+  "v12.txt": [
+    "maxBallotDurationDays",
+    "ballotExpiryLimit",
+    "ballotDurationCap"
+  ],
+  "v10.txt": [
+    "reserveRewardsPercentage",
+    "daoReserveAllocationRate",
+    "reserveFundingRate"
+  ],
+  "v11.txt": [
+    "upkeepRewardPct",
+    "callerRewardRate",
+    "upkeepCallerPercent"
+  ],
+  "v20.txt": [
+    "modificationCooldown",
+    "liquidityLockTime",
+    "stakeChangeInterval"
+  ],
+  "v1.txt": [
+    "arbitrageProfitShare",
+    "atomicArbitragePercentage",
+    "autoArbitrageProfitAllocation"
+  ],
+  "v0.txt": [
+    "halfEmissionsSalt",
+    "saltEmissionsHalf",
+    "fiftyPercentEmissionsSalt"
+  ],
+  "v21.txt": [
+    "upkeepRewardRate",
+    "upkeepIncentivePercentage",
+    "profitSharingRate"
+  ],
+  "v23.txt": [
+    "bootstrappingRewardsPerPool",
+    "whitelistedPoolRewards",
+    "poolBootstrappingAllocation"
+  ],
+  "v2.txt": [
+    "poolProfitDistribution",
+    "profitShareByPool",
+    "emissionAllocation"
+  ],
+  "v3.txt": [
+    "dailyEmissionRate",
+    "defaultRewardsRate",
+    "baseEmissionPercentage"
+  ],
+  "v22.txt": [
+    "saltBurnRateFromArbitrage",
+    "arbitrageProfitBurnRate",
+    "wethToSaltBurnPercentage"
+  ],
+  "v7.txt": [
+    "baseQuorumPercent",
+    "minBallotQuorum",
+    "quorumThresholdPercent"
+  ],
+  "v6.txt": [
+    "percentSaltBurned",
+    "arbitrageBurnRate",
+    "tokenBurnPercentage"
+  ],
+  "v19.txt": [
+    "minimumReclaimablePercent",
+    "baseUnstakePercent",
+    "minUnstakeRecovery"
+  ],
+  "v4.txt": [
+    "rewardDistributionRate",
+    "holderRewardShare",
+    "proportionalRewards"
+  ],
+  "v5.txt": [
+    "bootstrappingRewardAmount",
+    "initialPoolReward",
+    "newTokenBootReward"
+  ],
+  "v18.txt": [
+    "maxUnstakeWeeks",
+    "unstakePeriodLimit",
+    "fullReclaimWeeks"
+  ],
+  "v24.txt": [
+    "saltTokenMaxSupply",
+    "maxSaltSupply",
+    "saltMaxTokens"
+  ]
+}

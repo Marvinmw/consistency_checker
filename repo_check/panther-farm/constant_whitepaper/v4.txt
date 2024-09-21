@@ -1,0 +1,11 @@
+You are a good Smart Contract developer. Your task is to give a variable with a good name according to the description I provide. The variable is about the charge fee.  The description about the variable is 
+
+    '''
+    Deposit Fee Redistribution
+    Deposit Fee
+    When users enter the farming on PantherSwap, a 4% deposit fee will be charged. 
+    1% deposit fee will be sent to the dev team as the development fund.
+    3% deposit fee will be redistributed to PANTHER holders via Jungles farming.
+    '''
+
+What is the good variable name? Please provide 3 good choices. The name should be short, concise and precise. The answer just contains three names and do not need explain.
